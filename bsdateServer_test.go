@@ -3,6 +3,7 @@ package main
 import (
     "fmt"
     "github.com/DATA-DOG/godog"
+    "io/ioutil"
     "net/http"
     "strings"
 )
@@ -25,16 +26,23 @@ func aRequestIsSentToTheEndpoint(method, endpoint string) error {
     return nil
 }
 
-func theHTTPresponseCodeShouldBe(arg1 string) error {
-    return godog.ErrPending
+func theHTTPresponseCodeShouldBe(expectedCode int) error {
+    if expectedCode != res.StatusCode {
+        return fmt.Errorf("status code not as expected! Expected '%d', got '%d'", expectedCode, res.StatusCode)
+    }
+    return nil
 }
 
-func theResponseContentShouldBe(arg1 string) error {
-    return godog.ErrPending
+func theResponseContentShouldBe(expectedContent string) error {
+    body, _ := ioutil.ReadAll(res.Body)
+    if expectedContent != string(body) {
+        return fmt.Errorf("status code not as expected! Expected '%s', got '%s'", expectedContent, string(body))
+    }
+    return nil
 }
 
 func FeatureContext(s *godog.Suite) {
     s.Step(`^a "([^"]*)" request is sent to the endpoint "([^"]*)"$`, aRequestIsSentToTheEndpoint)
-    s.Step(`^the HTTP-response code should be "([^"]*)"$`, theHTTPresponseCodeShouldBe)
+    s.Step(`^the HTTP-response code should be "(\d+)"$`, theHTTPresponseCodeShouldBe)
     s.Step(`^the response content should be "([^"]*)"$`, theResponseContentShouldBe)
 }
