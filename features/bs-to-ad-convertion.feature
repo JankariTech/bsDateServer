@@ -10,5 +10,5 @@ Feature: convert dates from BS to AD using an API
 
   Scenario: converting an invalid BS date
   When a "GET" request is sent to the endpoint "/ad-from-bs/60-13-01"
-  Then the HTTP-response code should be "404"
+  Then the HTTP-response code should be "400"
   And the response content should be "not a valid date"
