@@ -1,0 +1,7 @@
+github.com/DATA-DOG/godog v0.7.13/go.mod h1:z2OZ6a3X0/YAKVqLfVzYBwFt3j6uSt3Xrqa7XTtcQE0=
+github.com/JankariTech/GoBikramSambat v0.0.0-20200103085928-58cd39da731e h1:ippnXuCOLHNkmXSbzW7YdvwtROczvxjhXh0e6qGtHJ4=
+github.com/JankariTech/GoBikramSambat v0.0.0-20200103085928-58cd39da731e/go.mod h1:G9Lmhh0BqLSVcTyYg2FfDcr8U9iHlhapo4EPD9KpGAk=
+github.com/gorilla/mux v1.7.3 h1:gnP5JzjVOuiZD07fKKToCAOjS0yOpj/qPETTXCCS6hw=
+github.com/gorilla/mux v1.7.3/go.mod h1:1lud6UwP+6orDFRuTfBEV8e9/aOM/c4fVVCaMa2zaAs=
+github.com/magiconair/properties v1.8.1 h1:ZC2Vc7/ZFkGmsVC9KvOjumD+G5lXy2RtTKyzRKO2BQ4=
+github.com/magiconair/properties v1.8.1/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
