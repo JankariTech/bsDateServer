@@ -1,4 +1,4 @@
-module github.com/JankariTech/bsdateServer
+module github.com/JankariTech/bsDateServer
 
 go 1.13
 
