@@ -21,7 +21,11 @@ func getAdFromBs(w http.ResponseWriter, r *http.Request) {
 	day, _ := strconv.Atoi(splitedDate[2])
 	month, _ := strconv.Atoi(splitedDate[1])
 	year, _ := strconv.Atoi(splitedDate[0])
-	date, _ := bsdate.New(day, month, year)
+	date, err := bsdate.New(day, month, year)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
 	gregorianDate, _ := date.GetGregorianDate()
 	fmt.Fprintf(w, gregorianDate.Format("2006-01-02"))
 }
