@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "github.com/DATA-DOG/godog"
+    "github.com/cucumber/godog"
     "io/ioutil"
     "net/http"
     "strings"
@@ -36,7 +36,7 @@ func theHTTPresponseCodeShouldBe(expectedCode int) error {
 func theResponseContentShouldBe(expectedContent string) error {
     body, _ := ioutil.ReadAll(res.Body)
     if expectedContent != strings.TrimSpace(string(body)) {
-        return fmt.Errorf("status code not as expected! Expected '%s', got '%s'", expectedContent, string(body))
+        return fmt.Errorf("response content not as expected! Expected '%s', got '%s'", expectedContent, string(body))
     }
     return nil
 }
