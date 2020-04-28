@@ -13,10 +13,16 @@ Feature: convert dates from BS to AD using an API
       | 2040-01-01 | 1983-04-14 |
       | 2040-12-30 | 1984-04-12 |
 
-  Scenario: converting an invalid BS date
-    When a "GET" request is sent to the endpoint "/ad-from-bs/60-13-01"
+  Scenario Outline: converting an invalid BS date
+    When a "GET" request is sent to the endpoint "/ad-from-bs/<bs-date>"
     Then the HTTP-response code should be "400"
     And the response content should be "not a valid date"
+    Examples:
+      | bs-date       |
+      | 2060-14-01    |
+      | 40-01-01      |
+      | date          |
+      | 1987-04-05-01 |
 
   Scenario Outline: unhandled request types
     When a "<type>" request is sent to the endpoint "/ad-from-bs/60-13-01"

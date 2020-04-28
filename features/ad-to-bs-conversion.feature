@@ -12,11 +12,20 @@ Feature: convert dates from AD to BS using an API
       | 2003-07-17 | 2060-04-01 |
       | 1983-04-14 | 2040-01-01 |
       | 1984-04-12 | 2040-12-30 |
+      | 2020-02-29 | 2076-11-17 |
 
-  Scenario: converting an invalid AD date
-    When a "GET" request is sent to the endpoint "/bs-from-ad/97-13-01"
+  Scenario Outline: converting an invalid AD date
+    When a "GET" request is sent to the endpoint "/bs-from-ad/<ad-date>"
     Then the HTTP-response code should be "400"
-    And the response content should be "not a valid date"
+    And the response content should be "cannot convert date, invalid or missing data"
+    Examples:
+      | ad-date       |
+      | 97-04         |
+      | 97-04-08      |
+      | aeiou         |
+      | 1984-04-31    |
+      | 1987-04-05-01 |
+      | 2022-02-29    |
 
   Scenario Outline: unhandled request types
     When a "<type>" request is sent to the endpoint "/bs-from-ad/60-13-01"
