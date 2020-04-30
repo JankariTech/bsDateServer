@@ -16,6 +16,10 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 
 func getAdFromBs(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
+	if r.Method != "GET" {
+		http.Error(w, "Could not create " + r.Method + " request ", http.StatusBadRequest)
+		return
+	}
 	dateString := vars["date"]
 	var splitedDate = strings.Split(dateString, "-")
 	if len(splitedDate) < 3 || len(splitedDate) > 3 {
@@ -37,6 +41,10 @@ func getAdFromBs(w http.ResponseWriter, r *http.Request) {
 
 func getBsFromAd(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
+	if r.Method != "GET" {
+		http.Error(w, "Could not create " + r.Method + " request ", http.StatusBadRequest)
+		return
+	}
 	dateString := vars["date"]
 	var splitedDate = strings.Split(dateString, "-")
 	if len(splitedDate) < 3 || len(splitedDate) > 3 {

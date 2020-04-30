@@ -13,6 +13,7 @@ Feature: convert dates from AD to BS using an API
       | 1983-04-14 | 2040-01-01 |
       | 1984-04-12 | 2040-12-30 |
       | 2020-02-29 | 2076-11-17 |
+      | 2020-01-31 | 2076-10-17 |
 
   Scenario Outline: converting an invalid AD date
     When a "GET" request is sent to the endpoint "/bs-from-ad/<ad-date>"
@@ -28,9 +29,12 @@ Feature: convert dates from AD to BS using an API
       | 2022-02-29    |
 
   Scenario Outline: unhandled request types
-    When a "<type>" request is sent to the endpoint "/bs-from-ad/60-13-01"
+    When a "<type>" request is sent to the endpoint "/bs-from-ad/<ad-date>"
     Then the HTTP-response code should be "400"
+    And the response content should be "<response>"
     Examples:
-      | type |
-      | POST |
-      | PUT  |
+      | type | ad-date    | response                      |
+      | POST | 97-04      | Could not create POST request |
+      | PUT  | 97-04      | Could not create PUT request  |
+      | POST | 2020-02-29 | Could not create POST request |
+      | PUT  | 2020-02-29 | Could not create PUT request  |

@@ -25,9 +25,12 @@ Feature: convert dates from BS to AD using an API
       | 1987-04-05-01 |
 
   Scenario Outline: unhandled request types
-    When a "<type>" request is sent to the endpoint "/ad-from-bs/60-13-01"
+    When a "<type>" request is sent to the endpoint "/ad-from-bs/<bs-date>"
     Then the HTTP-response code should be "400"
+    And the response content should be "<response>"
     Examples:
-      | type |
-      | POST |
-      | PUT  |
+      | type | bs-date    | response                      |
+      | POST | 87-04      | Could not create POST request |
+      | PUT  | 87-04      | Could not create PUT request  |
+      | POST | 2040-12-30 | Could not create POST request |
+      | PUT  | 2040-12-30 | Could not create PUT request  |
