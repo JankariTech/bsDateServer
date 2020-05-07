@@ -1,5 +1,5 @@
-github.com/JankariTech/GoBikramSambat v0.0.0-20200103085928-58cd39da731e h1:ippnXuCOLHNkmXSbzW7YdvwtROczvxjhXh0e6qGtHJ4=
-github.com/JankariTech/GoBikramSambat v0.0.0-20200103085928-58cd39da731e/go.mod h1:G9Lmhh0BqLSVcTyYg2FfDcr8U9iHlhapo4EPD9KpGAk=
+github.com/JankariTech/GoBikramSambat v0.0.0-20200507040640-7d5f1ba6f8da h1:qEOzI/BqfQNLgAlZz6QBoDqwU3DllxOcdVHLywRGnM4=
+github.com/JankariTech/GoBikramSambat v0.0.0-20200507040640-7d5f1ba6f8da/go.mod h1:G9Lmhh0BqLSVcTyYg2FfDcr8U9iHlhapo4EPD9KpGAk=
 github.com/aslakhellesoy/gox v1.0.100/go.mod h1:AJl542QsKKG96COVsv0N74HHzVQgDIQPceVUh1aeU2M=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/cucumber/gherkin-go/v11 v11.0.0 h1:cwVwN1Qn2VRSfHZNLEh5x00tPBmZcjATBWDpxsR5Xug=
@@ -18,12 +18,6 @@ github.com/gogo/protobuf v1.3.1/go.mod h1:SlYgWuQ5SjCEi6WLHjHCa1yvBfUnHcTbrrZtXP
 github.com/gorilla/mux v1.7.3 h1:gnP5JzjVOuiZD07fKKToCAOjS0yOpj/qPETTXCCS6hw=
 github.com/gorilla/mux v1.7.3/go.mod h1:1lud6UwP+6orDFRuTfBEV8e9/aOM/c4fVVCaMa2zaAs=
 github.com/hashicorp/go-version v1.0.0/go.mod h1:fltr4n8CU8Ke44wwGCBoEymUuxUHl09ZGVZPK5anwXA=
-github.com/jasson99/GoBikramSambat v0.0.0-20200429083245-67df2f0a0f46 h1:FVUntx8lTIolsSxBYSMg6NvbmdU+HpvMqsvU/t5IkEg=
-github.com/jasson99/GoBikramSambat v0.0.0-20200429083245-67df2f0a0f46/go.mod h1:itImmhh+gl2F/pMM+Doc+zO40tA9iVwMXn5qIWC4Y2s=
-github.com/jasson99/GoBikramSambat v0.0.0-20200429084431-e211e45565e3 h1:cl2A5LM0JL1tJIvfoM2uIJoUyvSMmzERqQT7RrhufzA=
-github.com/jasson99/GoBikramSambat v0.0.0-20200429084431-e211e45565e3/go.mod h1:itImmhh+gl2F/pMM+Doc+zO40tA9iVwMXn5qIWC4Y2s=
-github.com/jasson99/GoBikramSambat v0.0.0-20200429104950-d7192c8d0ac3 h1:wophy0WfqcBj8TtBviMeHTrxd5dIuKEX7sQHwG1IKU4=
-github.com/jasson99/GoBikramSambat v0.0.0-20200429104950-d7192c8d0ac3/go.mod h1:itImmhh+gl2F/pMM+Doc+zO40tA9iVwMXn5qIWC4Y2s=
 github.com/kisielk/errcheck v1.2.0/go.mod h1:/BMXB+zMLi60iA8Vv6Ksmxu/1UDYcXs4uQLJ+jE2L00=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/kr/pretty v0.2.0/go.mod h1:ipq/a2n7PKx3OHsz4KJII5eveXtPO4qwEXGdVfWzfnI=

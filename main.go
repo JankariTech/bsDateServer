@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/JankariTech/GoBikramSambat"
 	"github.com/gorilla/mux"
-	"github.com/jasson99/GoBikramSambat"
 	"log"
 	"net/http"
 	"strconv"
