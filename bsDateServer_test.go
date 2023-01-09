@@ -41,8 +41,8 @@ func theResponseContentShouldBe(expectedContent string) error {
     return nil
 }
 
-func FeatureContext(s *godog.Suite) {
-    s.Step(`^a "([^"]*)" request is sent to the endpoint "([^"]*)"$`, aRequestIsSentToTheEndpoint)
-    s.Step(`^the HTTP-response code should be "(\d+)"$`, theHTTPresponseCodeShouldBe)
-    s.Step(`^the response content should be "([^"]*)"$`, theResponseContentShouldBe)
+func FeatureContext(ctx *godog.ScenarioContext) {
+    ctx.Step(`^a "([^"]*)" request is sent to the endpoint "([^"]*)"$`, aRequestIsSentToTheEndpoint)
+    ctx.Step(`^the HTTP-response code should be "(\d+)"$`, theHTTPresponseCodeShouldBe)
+    ctx.Step(`^the response content should be "([^"]*)"$`, theResponseContentShouldBe)
 }
